@@ -36,7 +36,7 @@ const Rate = ({ savedNames, ratings, setRatings }) => {
                   onChange={(e) => handleRating(name, e.target.value)}
                   placeholder="Rate 1-5"
                   className="rating-input"
-                  style={{ fontSize: '1.5rem' }} // Make input larger
+                  style={{ fontSize: '1.5rem' }}
                 />
               </div>
             ))
@@ -60,3 +60,5 @@ const Rate = ({ savedNames, ratings, setRatings }) => {
 };
 
 export default Rate;
+
+
