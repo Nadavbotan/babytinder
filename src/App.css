@@ -1,0 +1,234 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: #4a90e2;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Message Styles */
+.message {
+  margin-top: 1rem;
+  font-weight: 600;
+  animation: fadeOut 3s forwards;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Additional Styles for Rate Component */
+.rate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rate-inputs {
+  flex: 1;
+}
+
+.rating-table {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.rating-table h2 {
+  margin-bottom: 1rem;
+}
+
+.rating-table ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rating-table li {
+  background-color: #4a90e2;
+  color: white;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.rating-input {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem; /* Increase input size */
+}
+
+.rating-input::-webkit-inner-spin-button,
+.rating-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Backgrounds for Different Tabs */
+.app-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.app-container.home {
+  background-color: #f0f4f8;
+}
+
+.app-container.swipe {
+  background-color: #e0f7fa;
+}
+
+.app-container.rate {
+  background-color: #ffe0b2;
+}
+
+/* Swipe Component Styles */
+.swipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-card {
+  width: 80%;
+  max-width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.swipe-card.dragging {
+  transition: none;
+}
+
+.swipe-card.left {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+
+.swipe-card.right {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+
+.swipe-card img {
+  width: 80%;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.swipe-card h2 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.like-icon {
+  color: green;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.dislike-icon {
+  color: red;
+  font-size: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .swipe-card {
+    width: 90%;
+    height: 300px;
+  }
+
+  .swipe-card img {
+    width: 70%;
+    height: 150px;
+  }
+
+  .swipe-card h2 {
+    font-size: 1.2rem;
+  }
+}
